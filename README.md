@@ -442,7 +442,7 @@ copies or substantial portions of the Software.
 - **Google**: For Maps and Geocoding services
 
 ### Technologies
-- **Vercel**: Deployment and edge network
+- **Netlify**: Deployment and edge network
 - **Next.js Team**: Amazing React framework
 - **shadcn**: Beautiful UI component library
 - **Recharts**: Data visualization library
