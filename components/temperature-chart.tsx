@@ -44,16 +44,21 @@ export function TemperatureChart() {
   const setLocationPreset = (preset: typeof locationPresets[0]) => {
     setLatitude(preset.lat)
     setLongitude(preset.lng)
+    // Trigger fetch after state update
+    setTimeout(() => {
+      fetchTemperatureDataWithCoords(preset.lat, preset.lng)
+    }, 0)
   }
 
-  const fetchTemperatureData = async () => {
+  const fetchTemperatureDataWithCoords = async (lat?: string, lng?: string) => {
+    const useLat = lat || latitude
+    const useLng = lng || longitude
+    
     setLoading(true)
     setError(null)
     
     try {
-      const url = `/api/temperature?latitude=${latitude}&longitude=${longitude}&start=${startDate}&end=${endDate}`
-      
-      console.log('Fetching from API route:', url)
+      const url = `/api/temperature?latitude=${useLat}&longitude=${useLng}&start=${startDate}&end=${endDate}`
       
       const response = await fetch(url)
       
@@ -77,7 +82,6 @@ export function TemperatureChart() {
         }))
         .sort((a, b) => a.date.localeCompare(b.date)) // Sort by date
       
-      console.log(`Successfully loaded ${temperatureEntries.length} temperature data points`)
       setTemperatureData(temperatureEntries)
       
     } catch (err) {
@@ -86,6 +90,10 @@ export function TemperatureChart() {
     } finally {
       setLoading(false)
     }
+  }
+
+  const fetchTemperatureData = () => {
+    fetchTemperatureDataWithCoords()
   }
 
   const formatDate = (dateStr: string): string => {
