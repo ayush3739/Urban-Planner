@@ -2,7 +2,8 @@
 
 Real-time air quality monitoring and disaster alert system powered by NASA satellite data and advanced analytics.
 
-**Live Demo**: [https://github.com/ayush3739/Urban-Planner](https://github.com/ayush3739/Urban-Planner)
+**Live Demo**: [https://urbansimulator.netlify.app](https://urbansimulator.netlify.app)  
+**GitHub Repository**: [https://github.com/ayush3739/Urban-Planner](https://github.com/ayush3739/Urban-Planner)
 
 ## 🎯 Overview
 
@@ -139,6 +140,28 @@ Navigate to [http://localhost:3000](http://localhost:3000)
 npm run build
 npm run start
 ```
+
+## 🌐 Deployment
+
+This project is deployed on **Netlify** with continuous deployment from the main branch.
+
+**Live URL**: [https://urbansimulator.netlify.app](https://urbansimulator.netlify.app)
+
+### Deployment Features
+- ✅ Automatic deployments on git push
+- ✅ Edge network CDN (global distribution)
+- ✅ Instant cache invalidation
+- ✅ HTTPS/SSL enabled by default
+- ✅ Environment variable management
+- ✅ Build optimization and minification
+
+### Deploy Your Own
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ayush3739/Urban-Planner)
+
+1. Click the "Deploy to Netlify" button above
+2. Connect your GitHub account
+3. Configure environment variables in Netlify dashboard
+4. Netlify will automatically build and deploy your site
 
 ## 📁 Project Structure
 
